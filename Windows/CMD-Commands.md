@@ -124,6 +124,45 @@ Successfully verified IP configuration, internet connectivity, and routing path.
 
 ✅ Completed
 
+# 🧪 Practical Lab 02 – Basic System & Network Information
+
+## Objective
+
+To verify system information and network connectivity using Windows Command Prompt / PowerShell.
+
+## Commands Executed
+
+```powershell
+hostname
+whoami
+systeminfo
+ipconfig /all
+ping 8.8.8.8
+```
+
+## Observations
+
+- Host Name: DESKTOP-THN1V5J
+- Operating System: Windows 11 Pro
+- RAM: 16 GB
+- System Type: x64-based PC
+- Network: Wi-Fi
+- IPv4 Address: 192.168.100.8
+- Default Gateway: 192.168.100.1
+- Internet Connectivity: Successful (0% packet loss)
+
+## Result
+
+✅ Successfully verified system information and internet connectivity using built-in Windows commands.
+
+## Skills Practiced
+
+- System Information
+- Network Verification
+- IP Configuration Analysis
+- Connectivity Testing
+
+✅ Completed
 *(This list will continue to grow as I complete more practical labs.)*
 
 ---
