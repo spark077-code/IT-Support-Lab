@@ -1,48 +1,69 @@
 # 🖥️ IT Support Lab
 
-Welcome to my IT Support Lab repository.
+Welcome to my *IT Support Lab* repository.
 
-This repository documents my practical learning journey in IT Support, Networking, Linux, Windows Administration, Virtualization, and Cyber Security.
+This repository serves as my practical learning portfolio, where I document hands-on experience in IT Support, Networking, Windows Administration, Linux, Virtualization, and Cyber Security.
 
-My goal is to build real-world technical skills through hands-on labs, documentation, troubleshooting, and continuous learning.
+My goal is to continuously improve my technical skills through real-world labs, troubleshooting exercises, and technical documentation.
 
 ---
 
-# 📚 Topics Covered
+## 🎯 Objectives
 
-- Windows Administration
+- Build practical IT Support skills
+- Strengthen troubleshooting abilities
+- Document real-world labs
+- Learn enterprise networking concepts
+- Practice Linux administration
+- Develop Cyber Security fundamentals
+- Prepare for professional IT Support roles
+
+---
+
+## 📚 Learning Modules
+
+### 🪟 Windows
+- Windows Installation
 - Windows Troubleshooting
-- Command Prompt (CMD)
-- PowerShell
-- Computer Networking
-- Packet Tracer Labs
+- CMD Commands
+- PowerShell Basics
+
+### 🌐 Networking
+- IP Addressing
+- Subnetting
+- Cisco Packet Tracer
 - EVE-NG Labs
-- Linux (Kali & Rocky Linux)
-- VMware Virtualization
-- Cyber Security Fundamentals
+- Network Troubleshooting
+
+### 🐧 Linux
+- Kali Linux
+- Rocky Linux
+- Linux Commands
+- Bash Basics
+
+### 🔒 Cyber Security
 - CEH Learning Notes
 - Nmap
 - Wireshark
 - Metasploit
-- Python for IT Automation
+- Enumeration
+- Vulnerability Assessment
+
+### 💻 Virtualization
+- VMware Workstation
+- Virtual Machines
+- Network Configuration
+
+### 🐍 Python
+- Python Basics
+- Automation Scripts
+- Network Automation
 
 ---
 
-# 🎯 Learning Objectives
+## 🛠️ Technologies & Tools
 
-- Build practical IT Support skills
-- Improve troubleshooting techniques
-- Document hands-on labs
-- Learn enterprise networking concepts
-- Practice Linux administration
-- Strengthen Cyber Security fundamentals
-- Prepare for real-world IT Support roles
-
----
-
-# 🛠️ Tools & Technologies
-
-- Windows 10 / Windows 11
+- Windows 10 / 11
 - Kali Linux
 - Rocky Linux
 - VMware Workstation
@@ -55,28 +76,30 @@ My goal is to build real-world technical skills through hands-on labs, documenta
 
 ---
 
-# 📈 Repository Progress
+## 📈 Progress
 
 | Module | Status |
 |----------|--------|
-| Windows | 🔄 In Progress |
-| Networking | 🔄 In Progress |
-| Linux | 🔄 In Progress |
-| Cyber Security | 🔄 In Progress |
-| Virtualization | 🔄 In Progress |
-| Python | ⏳ Coming Soon |
+| Windows | 🟡 In Progress |
+| Networking | 🟡 In Progress |
+| Linux | 🟡 In Progress |
+| Cyber Security | 🟡 In Progress |
+| Virtualization | 🟡 In Progress |
+| Python | 🔜 Coming Soon |
 
 ---
 
-# 👨‍💻 Author
+## 👨‍💻 About Me
 
-**Faisal Mehmood**
+I am a Computer Science graduate passionate about IT Support, Networking, Linux, and Cyber Security. This repository reflects my commitment to continuous learning, practical experience, and professional growth.
 
-Aspiring IT Support Engineer | Networking Enthusiast | Cyber Security Learner
+---
 
-LinkedIn:www.linkedin.com/in/-faisalmehmood69
-GitHub:https://github.com/spark077-code
+## 📫 Connect With Me
 
+- LinkedIn: www.linkedin.com/in/-faisalmehmood69
+- GitHub: https://github.com/spark077-code
 
-GitHub:
-https://github.com/spark077-code
+---
+
+⭐ If you find this repository helpful, feel free to explore my work and follow my learning journey.
