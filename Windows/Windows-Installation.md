@@ -1,84 +1,104 @@
-# 🪟 Windows Installation Guide
+# 🪟 Windows Installation
 
 ## 📌 Objective
 
-Learn how to install Microsoft Windows on a physical computer or a virtual machine.
+To learn and document the process of installing Microsoft Windows on a physical computer or a virtual machine.
 
 ---
 
-# Requirements
+## 📋 Prerequisites
 
-- Windows ISO File
-- Bootable USB (Rufus) or VMware
+Before starting the installation, ensure you have:
+
+- Windows ISO file
+- Bootable USB (created using Rufus) or VMware Workstation
 - Minimum 4 GB RAM
-- 50 GB Storage
+- At least 50 GB free disk space
+- Stable power supply (for physical installation)
 
 ---
 
-# Installation Methods
+## 🖥️ Lab Environment
 
-## Method 1
-Install Windows using a Bootable USB.
-
-## Method 2
-Install Windows using VMware Workstation.
+| Item | Details |
+|------|---------|
+| Host Operating System | Windows 11 |
+| Virtualization Software | VMware Workstation |
+| Guest Operating System | Windows 11 Pro |
+| RAM | 4 GB |
+| Disk | 60 GB |
 
 ---
 
-# Installation Steps
+## 🚀 Installation Steps
 
 1. Download the official Windows ISO.
-2. Create a bootable USB using Rufus.
-3. Boot the computer from the USB.
-4. Select language and keyboard layout.
-5. Click Install Now.
-6. Enter the product key or choose "I don't have a product key."
-7. Select Windows Edition.
+2. Create a bootable USB using Rufus (or mount the ISO in VMware).
+3. Boot from the USB or start the virtual machine.
+4. Select Language, Time, and Keyboard settings.
+5. Click **Install Now**.
+6. Enter the product key or select **I don't have a product key**.
+7. Choose the Windows edition.
 8. Accept the license agreement.
-9. Choose Custom Installation.
+9. Select **Custom: Install Windows only**.
 10. Create or select a partition.
-11. Wait for installation to complete.
-12. Configure region, keyboard, and user account.
+11. Wait for Windows to install.
+12. Complete the initial setup (Region, Keyboard, User Account, etc.).
 
 ---
 
-# Post Installation Tasks
+## ✅ Post-Installation Tasks
 
-- Install Drivers
+- Install device drivers
 - Run Windows Update
 - Install Google Chrome
-- Install Visual Studio Code
 - Install Git
+- Install Visual Studio Code
 - Install VMware Tools (if using VMware)
 
 ---
 
-# Common Problems
+## ⚠️ Common Issues
 
-## Windows Boot Loop
+### Boot Device Not Found
 
-Possible Causes
+**Possible Cause:**
 
-- Corrupted installation
-- Faulty boot order
-- Damaged hard drive
+- Incorrect boot order
+- Bootable USB not detected
 
----
+**Solution:**
 
-## Missing Drivers
-
-Solution
-
-Download drivers from the manufacturer's official website.
+- Check BIOS/UEFI boot settings
+- Recreate the bootable USB
 
 ---
 
-# Learning Notes
+### Missing Drivers
 
-This document will be updated as I gain more practical experience.
+**Solution:**
+
+Download and install drivers from the official manufacturer's website.
 
 ---
 
-**Author**
+## 🎯 Key Learnings
 
-Faisal Mehmood
+- Learned the Windows installation process.
+- Understood partition selection.
+- Practiced virtual machine installation.
+- Learned post-installation configuration.
+
+---
+
+## 📝 Practical Notes
+
+> This document will be updated as I complete more Windows installation labs and gain additional hands-on experience.
+
+---
+
+## 👨‍💻 Author
+
+**Faisal Mehmood**
+
+Aspiring IT Support Engineer | Networking Enthusiast | Cyber Security Learner
