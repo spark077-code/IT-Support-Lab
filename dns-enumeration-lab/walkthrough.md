@@ -1,202 +1,245 @@
 # DNS Enumeration Lab Walkthrough
 
-This walkthrough provides a step-by-step guide to the DNS Enumeration Lab performed during the reconnaissance phase of a penetration test. Each section includes the objective, command, screenshot, observations, and learning outcomes.
-
-> **Note:** Replace the image filenames with your actual screenshots stored inside the `images/` directory.
-
----
-
-# Lab Overview
-
-## Objective
-
-The purpose of this lab is to learn how to gather publicly available DNS information using industry-standard tools.
-
-## Tools Used
-
-- dig
-- nslookup
-- HackerTarget
-- dnsrecon
-- dnsenum
-- Nmap (NSE Scripts)
-- host
+> **Course:** Cyber Security / Ethical Hacking Lab  
+> **Lab Title:** DNS Enumeration  
+> **Category:** Information Gathering (Reconnaissance)  
+> **Platform:** Kali Linux & Windows Command Prompt  
+> **Tools:** dig, nslookup, host, dnsrecon, dnsenum, Nmap, HackerTarget
 
 ---
 
-# Step 1 – DNS Zone Transfer using dig
+# Aim
+
+The aim of this practical lab is to understand DNS Enumeration techniques and perform information gathering using industry-standard tools. The lab demonstrates how publicly available DNS records can be collected during the reconnaissance phase of a penetration test.
+
+---
+
+# Lab Environment
+
+| Component | Details |
+|-----------|---------|
+| Operating System | Kali Linux |
+| Additional Platform | Windows Command Prompt |
+| Internet Connection | Required |
+| Target Domain | `zonetransfer.me` (Authorized Learning Target) |
+
+---
+
+# Tool 1 – dig
 
 ## Objective
 
-Determine whether the target DNS server allows an unrestricted DNS Zone Transfer (AXFR).
+Test whether the target DNS server permits DNS Zone Transfer (AXFR).
 
-## Command
+### Command
 
 ```bash
 dig AXFR @nsztm1.digi.ninja zonetransfer.me
 ```
 
-## Screenshot
+### Screenshots
 
-```text
-images/dig-zone-transfer.png
-```
+> **Figure 1.1 – DNS Zone Transfer Request**
 
-```markdown
-![DNS Zone Transfer](images/dig-zone-transfer.png)
-```
+`images/dig-zone-transfer1.png`
 
-## Observation
+> **Figure 1.2 – DNS Zone Transfer Results**
 
-- The DNS server responded to the AXFR request.
-- DNS records were returned successfully.
-- This indicates that DNS Zone Transfer was permitted.
+`images/dig-zone-transfer2.png`
 
-## Learning Outcome
+> *(Later, replace these with a single collage image such as `images/dig-collage.png`.)*
 
-DNS Zone Transfers should normally be restricted. If enabled publicly, an attacker may obtain valuable DNS information during reconnaissance.
+### Observation
+
+- DNS Zone Transfer request executed successfully.
+- DNS records were returned by the server.
+
+### Result
+
+The server allowed DNS Zone Transfer for the lab environment.
 
 ---
 
-# Step 2 – DNS Lookup using nslookup
+# Tool 2 – nslookup
 
 ## Objective
 
-Retrieve DNS records for the target domain.
+Retrieve Mail Exchange (MX) records.
 
-## Command
+### Command
 
 ```cmd
 nslookup -type=MX zonetransfer.me
 ```
 
-## Screenshot
+### Screenshots
 
-```text
-images/nslookup-mx-record.png
-```
+Figure 2.1
 
-```markdown
-![nslookup MX Record](images/nslookup-mx-record.png)
-```
+`images/nslookup-mx-record1.png`
 
-## Observation
+Figure 2.2
+
+`images/nslookup-mx-record2.png`
+
+Figure 2.3
+
+`images/nslookup-mx-record3.png`
+
+Figure 2.4
+
+`images/nslookup-mx-record4.png`
+
+Figure 2.5
+
+`images/nslookup-mx-record5.png`
+
+> *(Later replace with `images/nslookup-collage.png`.)*
+
+### Observation
 
 - Multiple MX records were identified.
-- Google mail servers were configured for the domain.
-- MX preference values determined mail server priority.
+- Google Workspace mail servers were detected.
+- MX priorities were displayed successfully.
 
-## Learning Outcome
+### Result
 
-MX records help identify the email infrastructure of a target domain and are useful during information gathering.
+The mail infrastructure of the target domain was identified.
 
 ---
 
-# Step 3 – Online DNS Enumeration (HackerTarget)
+# Tool 3 – HackerTarget
 
 ## Objective
 
-Collect publicly available DNS information using an online reconnaissance tool.
+Perform online DNS reconnaissance.
 
-## Website
+### Website
 
 https://hackertarget.com/dns-lookup/
 
-## Screenshot
+### Screenshot
 
-```text
-images/hackertarget.png
-```
+Figure 3.1
 
-```markdown
-![HackerTarget](images/hackertarget.png)
-```
+`images/Hacker-target.png`
 
-## Observation
+### Observation
 
-- DNS information was collected successfully.
-- Multiple DNS records were displayed.
+- Public DNS information was successfully retrieved.
 
-## Learning Outcome
+### Result
 
-Online reconnaissance tools provide a quick overview of publicly available DNS information.
+Online reconnaissance confirmed publicly available DNS records.
 
 ---
 
-# Step 4 – DNS Enumeration using dnsrecon
+# Tool 4 – dnsrecon
 
 ## Objective
 
-Perform automated DNS enumeration.
+Perform automated DNS Enumeration.
 
-## Command
+### Command
 
 ```bash
 dnsrecon -d zonetransfer.me
 ```
 
-## Screenshot
+### Screenshots
 
-```text
-images/dnsrecon-output.png
-```
+Figure 4.1
 
-```markdown
-![dnsrecon Output](images/dnsrecon-output.png)
-```
+`images/dnsrecon-output1.png`
 
-## Observation
+Figure 4.2
 
-- DNS records were successfully identified.
-- Name servers and other DNS information were collected.
+`images/dnsrecon-output2.png`
 
-## Learning Outcome
+Figure 4.3
 
-dnsrecon automates DNS reconnaissance and reduces manual effort.
+`images/dnsrecon-output3.png`
+
+Figure 4.4
+
+`images/dnsrecon-output4.png`
+
+Figure 4.5
+
+`images/dnsrecon-output5.png`
+
+Figure 4.6
+
+`images/dnsrecon-output6.png`
+
+> *(Later replace with `images/dnsrecon-collage.png`.)*
+
+### Observation
+
+- DNS records were collected successfully.
+- Nameservers and other DNS information were identified.
+
+### Result
+
+Automated DNS Enumeration completed successfully.
 
 ---
 
-# Step 5 – DNS Enumeration using dnsenum
+# Tool 5 – dnsenum
 
 ## Objective
 
-Perform comprehensive DNS enumeration.
+Perform comprehensive DNS Enumeration.
 
-## Command
+### Command
 
 ```bash
 dnsenum zonetransfer.me
 ```
 
-## Screenshot
+### Screenshots
 
-```text
-images/dnsenum-output.png
-```
+Figure 5.1
 
-```markdown
-![dnsenum Output](images/dnsenum-output.png)
-```
+`images/dnsenum-output1.png`
 
-## Observation
+Figure 5.2
+
+`images/dnsenum-output2.png`
+
+Figure 5.3
+
+`images/dnsenum-output3.png`
+
+Figure 5.4
+
+`images/dnsenum-output4.png`
+
+Figure 5.5
+
+`images/dnsenum-output5.png`
+
+> *(Later replace with `images/dnsenum-collage.png`.)*
+
+### Observation
 
 - DNS records were collected successfully.
-- Zone transfer testing was performed.
-- Public DNS information was identified.
+- Zone Transfer checks were completed.
+- Public information was gathered.
 
-## Learning Outcome
+### Result
 
-dnsenum combines several DNS enumeration techniques into a single tool.
+Comprehensive DNS Enumeration was completed successfully.
 
 ---
 
-# Step 6 – DNS Enumeration using Nmap
+# Tool 6 – Nmap DNS Enumeration
 
 ## Objective
 
-Perform DNS enumeration using Nmap NSE scripts.
+Perform DNS Enumeration using Nmap NSE scripts.
 
-## Commands
+### Commands
 
 ```bash
 nmap --script dns-brute zonetransfer.me
@@ -206,104 +249,84 @@ nmap --script dns-brute zonetransfer.me
 nmap --script dns-zone-transfer --script-args dns-zone-transfer.domain=zonetransfer.me nsztm1.digi.ninja
 ```
 
-## Screenshot
+### Screenshot
 
-```text
-images/nmap-dns-enumeration.png
-```
+Figure 6.1
 
-```markdown
-![Nmap DNS Enumeration](images/nmap-dns-enumeration.png)
-```
+`images/nmap-dns-enumeration.png`
 
-## Observation
+### Observation
 
-- DNS-related NSE scripts executed successfully.
-- DNS information was collected.
-- Zone Transfer testing was completed.
+- NSE scripts executed successfully.
+- DNS-related information was collected.
 
-## Learning Outcome
+### Result
 
-Nmap extends DNS enumeration capabilities through powerful NSE scripts.
+Nmap successfully performed DNS Enumeration.
 
 ---
 
-# Step 7 – DNS Lookup using host
+# Tool 7 – host Command
 
 ## Objective
 
-Retrieve DNS records using the host command.
+Retrieve DNS information using the host command.
 
-## Command
+### Command
 
 ```bash
 host zonetransfer.me
 ```
 
-## Screenshot
+### Screenshot
 
-```text
-images/host-command.png
-```
+Figure 7.1
 
-```markdown
-![Host Command](images/host-command.png)
-```
+`images/host-command.png`
 
-## Observation
+### Observation
 
 - DNS records were resolved successfully.
-- Basic DNS information was retrieved.
 
-## Learning Outcome
+### Result
 
-The host command provides a simple and efficient way to query DNS records.
-
----
-
-# Overall Lab Summary
-
-| Task | Status |
-|------|--------|
-| DNS Zone Transfer (dig) | ✅ Completed |
-| nslookup | ✅ Completed |
-| HackerTarget | ✅ Completed |
-| dnsrecon | ✅ Completed |
-| dnsenum | ✅ Completed |
-| Nmap DNS Enumeration | ✅ Completed |
-| host Command | ✅ Completed |
+The host command successfully retrieved DNS information.
 
 ---
 
-# Skills Gained
+# Practical Summary
 
-- DNS Enumeration
-- DNS Record Analysis
-- Zone Transfer Testing
-- Information Gathering
-- Reconnaissance Techniques
-- Kali Linux
-- Nmap NSE
-- Linux Command Line
+| Tool | Purpose | Status |
+|------|---------|--------|
+| dig | DNS Zone Transfer | ✅ Completed |
+| nslookup | DNS Lookup | ✅ Completed |
+| HackerTarget | Online Enumeration | ✅ Completed |
+| dnsrecon | Automated Enumeration | ✅ Completed |
+| dnsenum | Comprehensive Enumeration | ✅ Completed |
+| Nmap | NSE DNS Scripts | ✅ Completed |
+| host | DNS Lookup | ✅ Completed |
 
 ---
 
-# Key Takeaways
+# Learning Outcomes
 
-- DNS Enumeration is an essential part of reconnaissance.
-- Different tools provide different types of DNS information.
-- Zone Transfers should never be publicly accessible.
-- Combining multiple tools improves reconnaissance accuracy.
-- Ethical hacking should always be performed with proper authorization.
+After completing this lab, I was able to:
+
+- Understand DNS Enumeration techniques.
+- Identify common DNS record types.
+- Perform DNS Zone Transfer testing.
+- Use multiple enumeration tools for reconnaissance.
+- Interpret DNS information collected during assessments.
+- Understand the role of reconnaissance in penetration testing.
 
 ---
 
 # Conclusion
 
-This lab successfully demonstrated practical DNS Enumeration using industry-standard tools. The exercises provided hands-on experience in collecting publicly available DNS information, understanding DNS infrastructure, and evaluating DNS configurations for common security weaknesses. These skills are fundamental for penetration testers, security analysts, and cybersecurity professionals.
+This practical lab successfully demonstrated DNS Enumeration using multiple industry-standard tools. Publicly available DNS information was collected, analyzed, and interpreted to understand how reconnaissance supports penetration testing and security assessments. The lab also emphasized the importance of properly securing DNS infrastructure to reduce information disclosure risks.
 
 ---
 
 # Disclaimer
 
-This walkthrough is intended for educational purposes only. Perform all DNS enumeration activities only on systems and domains for which you have explicit authorization. Unauthorized testing may violate laws and organizational policies.
+This project was conducted in an authorized learning environment for educational purposes only. All testing should be performed only against systems or domains for which explicit permission has been obtained.
